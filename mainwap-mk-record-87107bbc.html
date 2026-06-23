@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK体育 · 简明指南与提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e1e2a;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .page-wrapper {
+            max-width: 1040px;
+            margin: 0 auto;
+        }
+
+        /* 目录感布局 —— 卡片式网格 */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+        }
+
+        @media (min-width: 620px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid .full-width {
+                grid-column: 1 / -1;
+            }
+            .grid .col-span-2 {
+                grid-column: span 2;
+            }
+        }
+
+        /* 卡片共用设计 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e6e9ef;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+            padding: 1.8rem 1.6rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-header {
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-bottom: 0.7rem;
+            color: #2a2d3b;
+            border-left: 4px solid #7986cb;
+            padding-left: 0.8rem;
+        }
+
+        .hero {
+            text-align: left;
+            background: #ffffff;
+            border: 1px solid #e6e9ef;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            padding: 2.2rem 2rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero h1 {
+            font-weight: 600;
+            font-size: 2rem;
+            letter-spacing: -0.3px;
+            color: #1a1d2b;
+        }
+
+        .hero .sub {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: #5b5f73;
+            max-width: 560px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eef0f6;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #3f425a;
+            margin-right: 0.3rem;
+            border: 1px solid #d9dde8;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e5ed;
+            margin: 1.6rem 0 1rem;
+        }
+
+        .faq-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #e4e7f0;
+        }
+
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #2a2d3b;
+        }
+
+        .faq-a {
+            color: #4c4f62;
+            font-size: 0.93rem;
+            margin-top: 0.15rem;
+        }
+
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            padding-top: 0.5rem;
+        }
+
+        .info-chip {
+            background: #f5f7fc;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.88rem;
+            border: 1px solid #dee2ee;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid #a2aac5;
+            background: transparent;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2d3145;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-top: 0.3rem;
+        }
+
+        .btn-outline:hover {
+            background: #eef1fa;
+            border-color: #7f89b0;
+        }
+
+        .link-note {
+            color: #2b4d8c;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b1bbd9;
+            font-weight: 500;
+        }
+
+        a {
+            color: #1d3c7a;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footnote {
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #787d93;
+            text-align: center;
+            border-top: 1px solid #e2e5ed;
+            padding-top: 1.2rem;
+        }
+
+        .flex-space {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- HERO 简明指南入口 -->
+    <div class="hero">
+        <h1>MK体育 · 实用指引</h1>
+        <div class="sub">
+            从熟悉环境到日常使用，这份卡片式目录帮你快速找到需要的信息。<br>
+            保持理性，轻松参与。
+        </div>
+        <div style="margin-top: 1rem;">
+            <span class="tag"># 知识库</span>
+            <span class="tag"># 新手备忘</span>
+            <span class="tag"># 常见提醒</span>
+        </div>
+    </div>
+
+    <!-- 网格卡片区 -->
+    <div class="grid">
+
+        <!-- 卡片 1：快速认知 -->
+        <div class="card">
+            <div class="card-header">📌 基本认知</div>
+            <p style="margin-bottom: 0.8rem;">
+                <a href="https://mainwap-mk.com" class="link-note">MK体育</a> 是一个面向运动与休闲内容的平台，
+                你可以在其中浏览各类赛事信息、实时动态以及社区讨论。
+                本页作为轻量级知识卡片，汇总了常用提醒和背景说明。
+            </p>
+            <p style="font-size:0.92rem; color:#4a4e63;">
+                建议初次使用时先熟悉界面分区与功能入口，有助于后续快速查找。
+            </p>
+        </div>
+
+        <!-- 卡片 2：访问提醒 -->
+        <div class="card">
+            <div class="card-header">⚠️ 访问提醒</div>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="padding: 0.25rem 0;">• 确保使用最新版本浏览器，获得更稳定体验。</li>
+                <li style="padding: 0.25rem 0;">• 注意网络环境与个人隐私保护，避免公共设备保存密码。</li>
+                <li style="padding: 0.25rem 0;">• 如遇页面加载异常，可尝试清除缓存或更换时段访问。</li>
+                <li style="padding: 0.25rem 0;">• 平台内容更新较快，建议定期关注官方信息。</li>
+            </ul>
+        </div>
+
+        <!-- 卡片 3：常见场景 (全宽) -->
+        <div class="card full-width">
+            <div class="card-header">🧩 适用场景举例</div>
+            <div class="info-row">
+                <span class="info-chip">🏟️ 赛程查询</span>
+                <span class="info-chip">📊 数据浏览</span>
+                <span class="info-chip">🗞️ 新闻摘要</span>
+                <span class="info-chip">💬 讨论区</span>
+                <span class="info-chip">📅 提醒设置</span>
+            </div>
+            <p style="margin-top: 1rem; font-size:0.95rem;">
+                无论是想快速了解当日赛事，还是翻阅往期记录，<a href="https://mainwap-mk.com">MK体育</a>
+                都提供了清晰的分类入口。你可以根据个人习惯收藏常用栏目。
+            </p>
+        </div>
+
+        <!-- 卡片 4：FAQ 摘要 -->
+        <div class="card col-span-2" style="grid-column: span 2;">
+            <div class="card-header">❓ 常见问题 · 摘要</div>
+            <div class="faq-item">
+                <div class="faq-q">Q: 如何获取最新赛事提醒？</div>
+                <div class="faq-a">平台内通常设有推送订阅功能，找到「提醒」或「通知」选项即可按需设置。部分信息也可通过社区动态获取。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q: 内容是否支持移动端？</div>
+                <div class="faq-a">是的，<a href="https://mainwap-mk.com">MK体育</a> 经过响应式适配，手机与平板均可正常浏览。建议横屏查看数据表格类内容效果更佳。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q: 是否需要注册账号？</div>
+                <div class="faq-a">大部分浏览类功能无需注册即可使用；部分互动或个性化功能可凭自愿注册账号参与。具体以页面实际提示为准。</div>
+            </div>
+            <div style="margin-top: 0.6rem;">
+                <a href="#" class="btn-outline" style="pointer-events: none; opacity: 0.7;">📖 更多 FAQ 整理中</a>
+            </div>
+        </div>
+
+        <!-- 卡片 5：相关信息区 -->
+        <div class="card">
+            <div class="card-header">📎 相关信息</div>
+            <p style="margin-bottom: 0.6rem; font-size:0.93rem;">
+                • 平台内容由合作方及用户共同贡献，具体以实际展示为准。<br>
+                • 评论或分享时请注意文明用语，遵守社区基本规范。<br>
+                • 数据刷新可能存在短暂延迟，属正常现象。
+            </p>
+            <hr style="margin: 1rem 0 0.8rem;">
+            <div style="font-size:0.92rem;">
+                <span style="background:#eef1f9; padding:0.2rem 0.5rem; border-radius:12px;">🔄 最后更新：近期</span>
+            </div>
+        </div>
+
+        <!-- 卡片 6：提示区 -->
+        <div class="card">
+            <div class="card-header">💡 提示区</div>
+            <p style="font-size:0.95rem;">
+                避免一次性打开过多标签页，根据兴趣逐项浏览效率更高。<br><br>
+                如果你对某个版块有疑问，不妨先在社区或常见问题中搜索关键词，往往能找到现成解答。
+            </p>
+            <div style="margin-top: 0.8rem; font-size:0.9rem; color:#4d5070;">
+                <span>🔍 关键词建议：</span> 规则、时间、排行、联系
+            </div>
+        </div>
+
+        <!-- 卡片 7：一句话说明 -->
+        <div class="card full-width" style="background:#fafbfe;">
+            <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+                <span style="font-size: 1.2rem;">📋</span>
+                <span style="font-weight: 500;">日常使用参考 · 保持轻松心态</span>
+                <span style="margin-left: auto; font-size:0.9rem; color:#5f6380;">—— 信息入口 ——</span>
+            </div>
+            <p style="margin-top: 0.5rem; font-size:0.93rem;">
+                你可以随时回到这个知识卡片页，通过 <a href="https://mainwap-mk.com">MK体育</a> 的链接进入主站浏览更多内容。
+                另外，也欢迎收藏本页作为快速索引。
+            </p>
+        </div>
+
+    </div>
+
+    <!-- 底部脚注 -->
+    <div class="footnote">
+        <span>内容仅供参考 · 实际功能以网站为准</span>
+        <span style="margin:0 0.7rem;">·</span>
+        <span>知识库卡片 · 不定期更新</span>
+    </div>
+
+</div>
+</body>
+</html>
